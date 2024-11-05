@@ -15,7 +15,7 @@ function App() {
     setDownloadLink('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/download', { url });
+      const response = await axios.post('https://video-downloader-backend-4e6b.onrender.com/', { url });
       setDownloadLink(response.data.downloadUrl);
     } catch (error) {
       setError(error.response?.data?.error || 'Something went wrong');
